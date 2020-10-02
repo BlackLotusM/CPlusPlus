@@ -12,7 +12,7 @@ int main()
 
 	Coin1e c = Coin1e(0.5, "50Cent");
 	Coin50c e = Coin50c(1, "Euro");
-	CoinCoffee x = CoinCoffee(2, "special");
+	CoinCoffee x = CoinCoffee(999, "Special");
 
 	machine.takeCoin(c);
 	machine.takeCoin(e);

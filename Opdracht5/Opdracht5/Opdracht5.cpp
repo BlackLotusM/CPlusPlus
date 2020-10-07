@@ -9,7 +9,7 @@ int main()
 {
     Bibliotheek* biep = new Bibliotheek();
     Boek* boekie = new Boek();
-    boekie->uitGeleend = true;
+    boekie->uitGeleend = false;
 
     biep->leenUit(boekie); //leent het boek uit
     std::cout << "\n";

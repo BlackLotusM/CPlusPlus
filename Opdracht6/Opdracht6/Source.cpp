@@ -5,8 +5,8 @@
 
 int main() {
     {
-        Caravan caravan;
-        Caravan gestolen;
+        Caravan* caravan = new Caravan();
+        Caravan* gestolen = new Caravan();
         Koffer* koffer = new Koffer();
         Sokken sok;
 
@@ -14,16 +14,22 @@ int main() {
         //Als je geen string invoert is het ook automatische grijs!
         sok.veranderKleur("Groen");
         koffer->veranderKleur("Rood");
-        caravan.veranderKleur("Blauw");
+        caravan->veranderKleur("Blauw");
 
         koffer->vulKoffer(sok);
-        caravan.vulCaravan(koffer);
+        caravan->vulCaravan(koffer);
 
-        caravan.inhoudCaravan();
+        caravan->inhoudCaravan();
 
         std::cout << std::endl << "dat is pech caravan weg. Hier wordt die gestolen" << std::endl;
         gestolen = caravan;
-        gestolen.inhoudCaravan();
+        
+        gestolen->inhoudCaravan();
+
+        delete caravan;
+        gestolen = NULL;
+        delete gestolen;
+        delete koffer;
     }
     return 0;
 }

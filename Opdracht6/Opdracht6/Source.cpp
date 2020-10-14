@@ -26,8 +26,11 @@ int main() {
         
         gestolen->inhoudCaravan();
 
-        delete caravan;
+        caravan = NULL;
         gestolen = NULL;
+        koffer = NULL;
+
+        delete caravan;
         delete gestolen;
         delete koffer;
     }
